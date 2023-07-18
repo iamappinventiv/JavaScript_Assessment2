@@ -68,13 +68,50 @@ Shubham
 Difference between ```map() ``` and  ```forEach()``` is the returning value. The ``` forEach() ``` method returns undefined and map() returns a new array with the transformed elements. Even if they do the same job, the returning value remains different.
 
 ```javascript
-const myAwesomeArray = [1, 2, 3, 4, 5]
-console.log(myAwesomeArray.forEach(x => x * x));
-console.log(myAwesomeArray.map(x => x * x));
+const arr = [1, 2, 3, 4, 5]
+console.log(arr.forEach(x => x * x));
+console.log(arr.map(x => x * x));
 
 //Output
 mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
 undefined
 [ 1, 4, 9, 16, 25 ]
 ```
+------------------------------------------------
+------------------------------------------------
+# Question 3
+
+## What is the difference between .filter() and .find()?
+Explanation: First We see that what they are 
+``` filter() ``` method
+- This method returns all the elements of the array that satisfy the condition specified in the callback function.
+Example:
+```javascript
+const x = [1, 2, 3, 4, 5];
+const y = x.filter(x => x * 2 === 2);
+console.log(y);
+
+//Output
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js                  
+[ 1 ]
+```
+If you check out the output of the above example, the value of y is an array of 1 element that satisfies the condition. This is because the filter() method iterates over all elements of the array and then returns a filtered array which satisfy the condition specified.
+Now , Moving On Next Method
+What is the ```find()``` method?
+ - This method returns first element of the array that satisfies the condition specified in the callback function.
+ Example:
+ ```javascript
+ const x = [1, 2, 3, 4, 5];
+ const y = x.find(x => x * 2 === 2);
+ console.log(y);
+
+ // Output:
+ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+ 1
+ ```
+ Now, if we see the output of the example, the value of y is 1. This is because the ```find()``` method searches for first element in the array that satisfies the condition specified.
+
+ The main differences between above examples is:
+ * 1. ```filter()``` returns an array containing the element that satisfies the condition, but ```find() ```returns the element itself that satisfies the condition. 
+ * 2. In ```filter()```, whole array is iterated despite the fact that the element being searched for is present at the beginning. But in ```find()```, as soon as the element that satisfies the condition is found, it gets returned.
 ------------------------------------------------
