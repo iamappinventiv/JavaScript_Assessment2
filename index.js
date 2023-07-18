@@ -1,9 +1,9 @@
 // Use case of Map function
 
 
-const user = {
-    key: "Shivam",
-    age: 18
-  };
-  
-  console.log('key' in user); 
+let user = {
+    name: "John Doe",
+    age: 40
+  }; 
+  console.log('name' in user);
+  console.log('birth' in user);

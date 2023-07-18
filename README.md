@@ -82,7 +82,7 @@ undefined
 # Question 3
 
 ## What is the difference between .filter() and .find()?
-### <ins>Explanation:</ins> First We see that what they are 
+Explanation: First We see that what they are 
 ``` filter() ``` method
 - This method returns all the elements of the array that satisfy the condition specified in the callback function.
 Example:
@@ -117,7 +117,27 @@ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
 ------------------------------------------------
 ------------------------------------------------
 # 4 How do we check if a key exists in a JavaScript object?
+Explanation: You can use the JavaScript ```in```operator to check if a specified property/key exists in an object. It has a straightforward syntax and returns ``true`` if the specified property/key exists in the specified object or its prototype chain.
+* The syntax when using the ```in``` operator is:
+```javascript
+'keys' in object
+```
+* Suppose we have an object which contains a user's details:
 
-##  
+```javascript
+let user = {
+  name: "Shivam Shukla",
+  age: 23
+};
+console.log('name' in user); // Returns true
+console.log('birth' in user);// Returns false
+
+// Output
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+true
+false
+```
+Here If key exist it return true otherwise false .
+
 
 ------------------------------------------------
