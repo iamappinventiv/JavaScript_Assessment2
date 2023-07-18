@@ -209,3 +209,27 @@ The two objects that we are comparing don't have that: the object we passed as a
 This is why both ``{ age: 18 } === { age: 18 }`` and ```{ age: 18 } == { age: 18 }``` return false.
 
 ------------------------------------------------
+------------------------------------------------
+# Question 8
+## Remove Duplicate Items from Array using reduce function.
+
+Explanation:
+``` javascript
+let arr = ["shivam", "shubham", "danish",
+"saurabh", "shivam", "kaif", "shubham", "danish"];
+
+function removeDuplicates(arr) {
+let unique = arr.reduce(function (acc, curr) {
+if (!acc.includes(curr))
+    acc.push(curr);
+return acc;
+}, []);
+return unique;
+}
+console.log(removeDuplicates(arr));
+// Output:
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+[ 'shivam', 'shubham', 'danish', 'saurabh', 'kaif' ]
+
+ ```
+ * In the `reduce()` method, the array elements are reduced and combined into a final array based on the reducer function we pass
