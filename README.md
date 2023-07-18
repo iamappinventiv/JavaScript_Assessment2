@@ -48,6 +48,8 @@ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
 Like map , the forEach() method receives a function as an argument and executes it once for each array element. However, instead of returning a new array like map, it returns undefined.
 
 ```javascript
+// use case of forEach() function
+
 const arr = [
   { id: 1, name: "Shivam" },
   { id: 2, name: "Kaif" },
@@ -63,5 +65,16 @@ Kaif
 Shubham
 
 ```
-Difference between ```javascript map() ``` and  ```javascript forEach()``` is the returning value. The ``` javascript forEach() ``` method returns undefined and map() returns a new array with the transformed elements. Even if they do the same job, the returning value remains different.
+Difference between ```map() ``` and  ```forEach()``` is the returning value. The ``` forEach() ``` method returns undefined and map() returns a new array with the transformed elements. Even if they do the same job, the returning value remains different.
+
+```javascript
+const myAwesomeArray = [1, 2, 3, 4, 5]
+console.log(myAwesomeArray.forEach(x => x * x));
+console.log(myAwesomeArray.map(x => x * x));
+
+//Output
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+undefined
+[ 1, 4, 9, 16, 25 ]
+```
 ------------------------------------------------

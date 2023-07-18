@@ -1,10 +1,7 @@
 // Use case of Map function
 
 
-const arr = [
-    { id: 1, name: "Shivam" },
-    { id: 2, name: "Kaif" },
-    { id: 3, name: "Shubham" },
-  ]
-  
-  arr.forEach(element => console.log(element.name))
+const myAwesomeArray = [1, 2, 3, 4, 5]
+console.log(myAwesomeArray.forEach(x => x * x));
+
+console.log(myAwesomeArray.map(x => x * x));
