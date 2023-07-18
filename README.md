@@ -19,7 +19,7 @@ true
 false
 
 ```
-- Explanation:
+Explanation:
 
 - We can use the includes() method in JavaScript to check if an item exists in an array
 
@@ -82,7 +82,7 @@ undefined
 # Question 3
 
 ## What is the difference between .filter() and .find()?
-Explanation: First We see that what they are 
+<u>Explanation:</u> First We see that what they are 
 ``` filter() ``` method
 - This method returns all the elements of the array that satisfy the condition specified in the callback function.
 Example:
@@ -117,5 +117,7 @@ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
 ------------------------------------------------
 ------------------------------------------------
 # 4 How do we check if a key exists in a JavaScript object?
+
+##  
 
 ------------------------------------------------
