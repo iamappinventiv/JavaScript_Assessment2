@@ -1,9 +1,13 @@
-// Use case of Map function
-
-
-let user = {
-    name: "John Doe",
-    age: 40
-  }; 
-  console.log('name' in user);
-  console.log('birth' in user);
+function checkAge(data) { 
+    if (data === { age: 18 }) 
+       { 
+         console.log('You are an adult!'); 
+       }
+   else if (data == { age: 18 }) 
+       { 
+         console.log('You are still an adult.'); 
+       } else { 
+           console.log(`Hmm.. You don't have an age I guess`); 
+       } 
+      } 
+    checkAge({ age: 18 });

@@ -117,10 +117,10 @@ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
 ------------------------------------------------
 ------------------------------------------------
 # 4 How do we check if a key exists in a JavaScript object?
-Explanation: You can use the JavaScript ```in```operator to check if a specified property/key exists in an object. It has a straightforward syntax and returns ``true`` if the specified property/key exists in the specified object or its prototype chain.
+Explanation: We can use the JavaScript ```in```operator to check if a specified property/key exists in an object. It has a straightforward syntax and returns ``true`` if the specified property/key does not exists it return ``false``.
 * The syntax when using the ```in``` operator is:
 ```javascript
-'keys' in object
+'keys' in obj
 ```
 * Suppose we have an object which contains a user's details:
 
@@ -137,7 +137,75 @@ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
 true
 false
 ```
-Here If key exist it return true otherwise false .
+Here If key exist it return `true` otherwise `false` .
 
+
+------------------------------------------------
+------------------------------------------------
+# Question 5
+## What is the output of the following code? Why?
+``` javascript
+var a = 3; 
+var b = { a: 9, b: ++a }; 
+console.log(a + b.a + ++b.b);
+
+// Output
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js                  
+18
+```
+- Explanation: Prefix operator increments the number and then returns it. 
+  So the following expression will be calculated  as 4 + 9 + 5 = 18
+------------------------------------------------
+------------------------------------------------
+# Question 6
+##  What is the output of the following code? Why?
+
+```javascript
+const arrayOfOddNumbers = [1, 3, 5]; 
+arrayOfOddNumbers[100] = 199; 
+console.log(arrayOfOddNumbers.length);
+
+// Output
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+101
+```
+- Explanation: The reason for this solution is as follows: 
+JavaScript places `empty` as a value for indices 3 - 99.
+That's why, when we set the value of the 100th index, the array looks like:
+```javascript
+    [1, 3, 5 , empty x 97 , 199]
+```
+We get the lenght as 101
+
+------------------------------------------------
+
+------------------------------------------------
+# Question 7
+## What is the output of the following code? Why?
+```javascript
+function checkAge(data) { 
+    if (data === { age: 18 }) 
+       { 
+         console.log('You are an adult!'); 
+       }
+   else if (data == { age: 18 }) 
+       { 
+         console.log('You are still an adult.'); 
+       } else { 
+           console.log(`Hmm.. You don't have an age I guess`); 
+       } 
+      } 
+    checkAge({ age: 18 });
+// Output 
+ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+ Hmm.. You don't have an age I guess
+
+```
+- Explanation
+When testing equality, primitives are compared by their value, while objects are compared by their reference. JavaScript checks if the objects have a reference to the same location in memory.
+
+The two objects that we are comparing don't have that: the object we passed as a parameter refers to a different location in memory than the object we used in order to check equality.
+
+This is why both ``{ age: 18 } === { age: 18 }`` and ```{ age: 18 } == { age: 18 }``` return false.
 
 ------------------------------------------------
