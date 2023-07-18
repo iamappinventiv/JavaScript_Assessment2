@@ -1,8 +1,10 @@
-// To check if an element exists in an array
-const arr = [1,3,5,6,7,8,9,10,11,12]
-console.log(arr.includes(9));
+// Use case of Map function
 
-// Check if an element does not exist in an array
 
-const arr1 =[1,3,5,6,7,8,9,10,11,12]
-console.log(arr.includes(2));
+const arr = [
+    { id: 1, name: "Shivam" },
+    { id: 2, name: "Kaif" },
+    { id: 3, name: "Shubham" },
+  ]
+  
+  arr.forEach(element => console.log(element.name))

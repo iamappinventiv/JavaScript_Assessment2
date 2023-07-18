@@ -29,6 +29,39 @@ We can use the includes() method in JavaScript to check if an item exists in an 
 
 * The includes() method is case sensitive.
 
+------------------------------------------------
+------------------------------------------------
+# Question:2 
+## What is the difference between .map() and .forEach()?
 
+Explanation: The map method receives a function as a parameter. Then it applies it on each element and returns an entirely new array populated with the results of calling the provided function.
+This means that it returns a new array that contains an image of each element of the array. It will always return the same number of items.
+```javascript
+// Use case of Map function
+const arr = [5, 4, 3, 2, 1]
+console.log(arr.map(x => x * x));
 
+// Output:
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+[ 25, 16, 9, 4, 1 ]
+```
+Like map , the forEach() method receives a function as an argument and executes it once for each array element. However, instead of returning a new array like map, it returns undefined.
+
+```javascript
+const arr = [
+  { id: 1, name: "Shivam" },
+  { id: 2, name: "Kaif" },
+  { id: 3, name: "Shubham" },
+]
+
+arr.forEach(element => console.log(element.name))
+
+// Output:
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+Shivam
+Kaif
+Shubham
+
+```
+Difference between ```javascript map() ``` and  ```javascript forEach()``` is the returning value. The ``` javascript forEach() ``` method returns undefined and map() returns a new array with the transformed elements. Even if they do the same job, the returning value remains different.
 ------------------------------------------------
