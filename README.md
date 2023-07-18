@@ -82,7 +82,7 @@ undefined
 # Question 3
 
 ## What is the difference between .filter() and .find()?
-<u>Explanation:</u> First We see that what they are 
+### <ins>Explanation:</ins> First We see that what they are 
 ``` filter() ``` method
 - This method returns all the elements of the array that satisfy the condition specified in the callback function.
 Example:
