@@ -403,14 +403,14 @@ console.log(totalMarks);
  Input: [“Test”, true, null, false, 0]
  Output: [“Test”, true]
  ```javascript
-  function filterValues(array) {
-  return array.filter(item => item !== false && item !== null && item !== 0 && item !== ''); // filtered Null ,false , 0
-  }
-  var array =  ["Test", true, null, false, 0]
-  console.log(filterValues(array));  
+ function filterValues(array) {
+    return array.filter((item) => item ); // filtered Null ,false , 0
+    }
+    var array =  ["Test", true, null, false, 0]
+    console.log(filterValues(array));  
  // Output
- mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
- [ 'Test', true ]
+  vmac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+  [ 'Test', true ]
  ```
  ------------------------------------------------
  ------------------------------------------------
