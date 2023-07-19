@@ -333,3 +333,35 @@ Output for Array: true
 ```
 - It returns a true boolean value if the variable is an array and a false if it is not.
  ------------------------------------------------
+ ------------------------------------------------
+ # Question 11 Write a JavaScript function to sort the following array of objects by title value. 
+## Sample object : 
+ var library = [ { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254}, { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264}, { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245} ];
+
+ ```javascript
+    var library = [
+  { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
+  { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
+  {
+    author: "Suzanne Collins",
+    title: "Mockingjay: The Final Book of The Hunger Games",
+    libraryID: 3245,
+  },
+];
+let sortByTitle = library.sort((a,b) => a.title > b.title ? 1 : -1);
+console.log(sortByTitle);
+
+// Output
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+[
+  {
+    author: 'Suzanne Collins',
+    title: 'Mockingjay: The Final Book of The Hunger Games',
+    libraryID: 3245
+  },
+  { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 },
+  { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 }
+]
+```
+
+ ------------------------------------------------

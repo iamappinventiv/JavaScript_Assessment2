@@ -1,11 +1,13 @@
-function checkArray() {
-  let str = "This is a string";
-  let arr = [10, 20, 30, 40];
+var library = [
+  { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
+  { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
+  {
+    author: "Suzanne Collins",
+    title: "Mockingjay: The Final Book of The Hunger Games",
+    libraryID: 3245,
+  },
+];
+let sortByTitle = library.sort((a,b) => a.title > b.title ? 1 : -1);
+console.log(sortByTitle);
 
-  let ans = str.constucture === Array;
-  console.log("Output for String: " + ans);
-  ans = arr.constucture ===  Array;
-  console.log("Output for Array: " + ans);
-}
 
-checkArray();
