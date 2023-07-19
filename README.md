@@ -116,7 +116,8 @@ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
  * 2. In ```filter()```, whole array is iterated despite the fact that the element being searched for is present at the beginning. But in ```find()```, as soon as the element that satisfies the condition is found, it gets returned.
 ------------------------------------------------
 ------------------------------------------------
-# 4 How do we check if a key exists in a JavaScript object?
+# Question
+## 4 How do we check if a key exists in a JavaScript object?
 Explanation: We can use the JavaScript ```in```operator to check if a specified property/key exists in an object. It has a straightforward syntax and returns ``true`` if the specified property/key does not exists it return ``false``.
 * The syntax when using the ```in``` operator is:
 ```javascript
