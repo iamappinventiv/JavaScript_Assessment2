@@ -1,13 +1,12 @@
-var library = [
-  { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
-  { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
-  {
-    author: "Suzanne Collins",
-    title: "Mockingjay: The Final Book of The Hunger Games",
-    libraryID: 3245,
-  },
-];
-let sortByTitle = library.sort((a,b) => a.title > b.title ? 1 : -1);
-console.log(sortByTitle);
 
+const countArrays = (arr) => {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      count++;
+    }
+  }
+  return count;
+};
 
+console.log(countArrays([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]]));

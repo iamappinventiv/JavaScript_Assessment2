@@ -334,8 +334,9 @@ Output for Array: true
 - It returns a true boolean value if the variable is an array and a false if it is not.
  ------------------------------------------------
  ------------------------------------------------
- # Question 11 Write a JavaScript function to sort the following array of objects by title value. 
-## Sample object : 
+ # Question 11 
+ ## Write a JavaScript function to sort the following array of objects by title value. 
+### Sample object : 
  var library = [ { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254}, { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264}, { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245} ];
 
  ```javascript
@@ -348,7 +349,7 @@ Output for Array: true
     libraryID: 3245,
   },
 ];
-let sortByTitle = library.sort((a,b) => a.title > b.title ? 1 : -1);
+let sortByTitle = library.sort((a,b) => a.title > b.title ? 1 : -1);  // Sort() method to sort array of objects by title value
 console.log(sortByTitle);
 
 // Output
@@ -363,5 +364,78 @@ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
   { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 }
 ]
 ```
+
+ ------------------------------------------------
+ ------------------------------------------------
+ # Question 12
+ ## Write a program to derive the provided output:-
+ * Input: var arrOfObj=[{name: 'Rohan', physics: 20, chemistry: 18, math: 26}, {name: 'Geeta', physics: 29, chemistry: 30, math:  22}, {name: 'Kunal', physics: 27, chemistry: 25, math: 21}, {name: 'Abhishek', physics: 21, chemistry: 26, math: 23},   {name: 'Aashish', physics: 25, chemistry: 16, math: 18}];
+ * Output: { Rohan: 64, Geeta: 81, Kunal: 73, Abhishek: 70, Aashish: 59 }
+ 
+ ```javascript
+ var arrOfObj = [
+  { name: "Rohan", physics: 20, chemistry: 18, math: 26 },
+  { name: "Geeta", physics: 29, chemistry: 30, math: 22 },
+  { name: "Kunal", physics: 27, chemistry: 25, math: 21 },
+  { name: "Abhishek", physics: 21, chemistry: 26, math: 23 },
+  { name: "Aashish", physics: 25, chemistry: 16, math: 18 },
+];
+var totalMarks = {};
+
+for (var i = 0; i < arrOfObj.length; i++) {
+  var student = arrOfObj[i];
+  var total = student.physics + student.chemistry + student.math; // Adding Marks of student
+  totalMarks[student.name] = total;
+}
+
+console.log(totalMarks);
+
+// Output
+ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js                  
+{ Rohan: 64, Geeta: 81, Kunal: 73, Abhishek: 70, Aashish: 59 }
+ ```
+
+ ------------------------------------------------
+ ------------------------------------------------
+ # Question 13
+ ## Write a JavaScript function to filter false, null, 0 and blank values from an array.
+ Input: [“Test”, true, null, false, 0]
+ Output: [“Test”, true]
+ ```javascript
+  function filterValues(array) {
+  return array.filter(item => item !== false && item !== null && item !== 0 && item !== ''); // filtered Null ,false , 0
+  }
+  var array =  ["Test", true, null, false, 0]
+  console.log(filterValues(array));  
+ // Output
+ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+ [ 'Test', true ]
+ ```
+ ------------------------------------------------
+ ------------------------------------------------
+ # Question 15
+ ## Write a JavaScript program to count the number of arrays inside a given array.
+
+  Input: [2,8,[6],3,3,5,3,4,[5,4]]
+  Output: 2
+
+  ```javascript
+  const countArrays = (arr) => {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {  // Count no. of array
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(countArrays([2, 8, [6], 3, 3, 5, 3, 4, [5, 4]]));
+
+// Output 
+  mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+  2 
+
+  ```
 
  ------------------------------------------------
