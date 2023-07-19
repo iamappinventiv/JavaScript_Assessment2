@@ -414,7 +414,7 @@ console.log(totalMarks);
  ```
  ------------------------------------------------
  ------------------------------------------------
- # Question 15
+ # Question 14
  ## Write a JavaScript program to count the number of arrays inside a given array.
 
   Input: [2,8,[6],3,3,5,3,4,[5,4]]
