@@ -1,12 +1,11 @@
-let arr = ["shivam", "shubham", "danish",
-"saurabh", "shivam", "kaif"];
+function checkArray() {
+  let str = "This is a string";
+  let arr = [10, 20, 30, 40];
 
-function removeDuplicates(arr) {
-let unique = arr.reduce(function (acc, curr) {
-if (!acc.includes(curr))
-    acc.push(curr);
-return acc;
-}, []);
-return unique;
+  let ans = str.constucture === Array;
+  console.log("Output for String: " + ans);
+  ans = arr.constucture ===  Array;
+  console.log("Output for Array: " + ans);
 }
-console.log(removeDuplicates(arr));
+
+checkArray();

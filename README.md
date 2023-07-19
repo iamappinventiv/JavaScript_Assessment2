@@ -232,4 +232,104 @@ mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
 [ 'shivam', 'shubham', 'danish', 'saurabh', 'kaif' ]
 
  ```
- * In the `reduce()` method, the array elements are reduced and combined into a final array based on the reducer function we pass
+ * In the `reduce()` method, the array elements are reduced and combined into a final array based on the reducer function we pass.
+
+ ------------------------------------------------
+ ------------------------------------------------
+ # Question 9 
+ ## Sort an array of strings by length.
+```javascript
+
+Input: ["Testing", "The", "Code"]
+Output: [“The", "Code", "Testing"]
+
+// Code 
+
+const arr = ["Testing", "The", "Code"]
+arr.sort(function(a, b){
+    return a.length - b.length;
+  });
+console.log(arr);
+
+// Output:
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js     
+[ 'The', 'Code', 'Testing' ]
+```
+- Explanation - In this Simple way we use `sort()` method on the arr of strings . The `sort` method takes comparison
+  function as an argument , which compares two element of the array and determines their order. this comparison fn `(a,b) => a.length - b.length ` compares the lenght by subtraction , we got ascending order based on string. 
+ ------------------------------------------------
+ ------------------------------------------------
+ # Question 10 
+ ## Write a JavaScript function to check whether an `input` is an array or not.
+ Explanation: In JS we check variable is an array by using 3 methods , these are:
+* Using `isArray()` method
+* Using `instanceof` operator 
+* Using  checking the `constructor` type 
+### Method 1. `isArray()` Method
+Example 1: In this example, we will check if a given variable is an array or 
+not using the` isArray()` method in JavaScript.
+```javascript
+function checkArray() {
+  let str = "This is a string";
+  let arr = [10, 20, 30, 40];
+
+  let ans = Array.isArray(str);
+  console.log("Output for String: " + ans);
+  ans = Array.isArray(arr);
+  console.log("Output for Array: " + ans);
+}
+
+checkArray();
+
+// Output
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+Output for String: false
+Output for Array: true
+
+```
+- It returns a true boolean value if the variable is an array and a false if it is not.
+
+### Method 2 Using JavaScript `instanceof` operator
+- Example: In this example, we will check if a given variable is an array or not using the instanceof operator in JavaScript. 
+```javascript
+function checkArray() {
+  let str = "This is a string";
+  let arr = [10, 20, 30, 40];
+
+  let ans = str instanceof Array;
+  console.log("Output for String: " + ans);
+  ans = arr instanceof  Array;
+  console.log("Output for Array: " + ans);
+}
+
+checkArray();
+
+// Output
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+Output for String: false
+Output for Array: true
+```
+
+- It returns a true boolean value if the variable is an array and a false if it is not.
+### Method 3: Checking the constructor property of the variable
+Example 3: In this example, we will check if a given variable is an array or 
+not using the` constructor` method in JavaScript.
+```javascript
+function checkArray() {
+  let str = "This is a string";
+  let arr = [10, 20, 30, 40];
+
+  let ans = str.constucture === Array;
+  console.log("Output for String: " + ans);
+  ans = arr.constucture ===  Array;
+  console.log("Output for Array: " + ans);
+}
+
+checkArray();
+// Output
+mac@macs-MacBook-Pro JavaScript_Assessment2 % node index.js
+Output for String: false
+Output for Array: true
+```
+- It returns a true boolean value if the variable is an array and a false if it is not.
+ ------------------------------------------------
